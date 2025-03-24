@@ -1,0 +1,125 @@
+.courses-page-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: calc(100vh - 150px); 
+    margin-top: 100px; 
+    margin-bottom: 30px;
+}
+
+.courses-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    padding: 0 20px; 
+    row-gap: 0; 
+    column-gap: 0; 
+}
+
+.course-card {
+    color: #303A52; 
+    padding: 50px 40px; 
+    border-radius: 20px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+    text-align: center;  
+    max-width: 700px;
+    width: 100%;
+    border: 2px solid #E40045;
+    margin: 10px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.buton button {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    width: 200px;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    
+}
+.buton a {
+    text-decoration: none;
+}
+.course-card button:hover {
+    transform: translateY(-5px);
+}
+.buton {
+    margin-top: auto; 
+}
+.inf {
+    background-color: #007bff;
+    color: white; 
+}
+.start {
+    background-color: #28a745; 
+    color: white;
+    text-decoration: none;
+}
+.start:hover {
+    background-color: #218838;
+}
+.inf:hover {
+    background-color: #0056b3; 
+}
+.prob p {
+    padding-top: 78px;
+}
+.prob h2 {
+    padding-top: 50px;
+}
+.image img {
+    margin: 0;
+    padding: 0; 
+    max-width: 50%; 
+
+  }
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.image h2 {
+    margin-right: 20px; 
+}
+.text-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    justify-content: space-between;
+}
+.course-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.course-card, .prob, .image, .course-content {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .courses-page {
+        grid-template-columns: 1fr;
+    }
+    .prob p {
+        padding-top: 0px;
+    }
+    .prob h2 {
+        padding-top: 0px;    
+    }
+}
